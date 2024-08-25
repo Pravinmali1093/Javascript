@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const users = [];
+        const user0 = { id: 1, name: "Ajas", address: "Pune", uname: "admin1", pass: "admin1" };
+        const user1 = { id: 2, name: "Amay", address: "Pune", uname: "admin2", pass: "admin2" };
+        const user2 = { id: 3, name: "Ajay", address: "Pune", uname: "admin3", pass: "admin3" };
+        const user3 = { id: 4, name: "Sagar", address: "Pune", uname: "admin4", pass: "admin4" };
+        const user4 = { id: 5, name: "Nilesh", address: "Pune", uname: "admin5", pass: "admin5" };
+        const user5 = { id: 6, name: "Riyaj", address: "Pune", uname: "admin6", pass: "admin6" };
+        const user6 = { id: 7, name: "samad", address: "Pune", uname: "admin7", pass: "admin7" };
+        const user7 = { id: 8, name: "Jaid", address: "Pune", uname: "admin8", pass: "admin8" };
+        const user8 = { id: 9, name: "Amol", address: "Pune", uname: "admin9", pass: "admin9" };
+        const user9 = { id: 10, name: "vivek", address: "Pune", uname: "admin10", pass: "admin10" };
+        users[0] = user0; users[1] = user1; users[2] = user2; users[3] = user3; users[4] = user4;
+        users[5] = user5; users[6] = user6; users[7] = user7; users[8] = user8; users[9] = user9;
+
+
+        const users1 = [];
+        const usern1 = { id: 21, name: "Juber", address: "Pune", uname: "admin21", pass: "admin21" };
+        users1[0] = usern1;
+
+        const arr = users.concat(users1);
+        console.log(arr);
+
+        const itr = arr.entries();
+        let itr1 = arr.entries();
+        for (let [key, value] of arr.entries()) {
+            console.log(key + "  " + JSON.stringify(value));
+        }
+        // console.log("1st index : " + itr.next().value);
+        // //  const a1 = itr.next().value;
+        //  console.log("2nd Index : " + itr.next().value);
+        // const a = itr.next().value;
+        //  console.log("Key : " + a[0] + " Value : " +JSON.stringify(a[1]));
+        //  const a1 = itr.next().value;
+        //  console.log("Key : " + a1[0] + " Value : " +JSON.stringify(a1[1]));
+        let itr2 = arr.entries();
+        for (var i = 0; i < arr.length; i++) {
+            let a1 = itr2.next().value;
+            console.log("============")
+            console.log("Key : " + a1[0] + " Value : " + JSON.stringify(a1[1]));
+        }
+        //  const usern2 = { id: 21, name: "Juber", address: "Pune", uname: "admin21", pass: "admin21" };
+
+        //    const f = arr.every(usern2);
+        //     console.log(f)
+
+
+        const isBelowThreshold = (currentValue) => currentValue == 40;
+        console.log(isBelowThreshold)
+        const array1 = [40, 41, 49, 29, 10, 13];
+
+        console.log(array1.every(isBelowThreshold));
+  
+        const array2 = [5, 9, 8, 130, 44];
+for(let i = 0 ; i < arr.length;i++){
+const found = arr.find((i) => i.id > 5);
+
+console.log(found);
+    }
+    </script>
+</body>
+
+</html>

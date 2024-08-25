@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: red;">
+    <h1>Hello Hi</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatem incidunt eum sit debitis odit? Mollitia dolore at dicta culpa voluptatibus, doloremque sapiente. Aliquid debitis voluptatibus fugit, veniam repudiandae ut!</p>
+<script>
+     let username = "Ajas Sa Ajas Shaikh(83999)";
+     let user = new String("Ajas Shaikh(83999)");
+     let str = user.split(/\(([^)]+)\)/);
+     let name = str[0].trim();
+     let empCode = str[1];
+     console.log(name +"  " + empCode);
+
+
+     var i = username.lastIndexOf('Aj');
+      console.log(i);
+
+      var j = username.indexOf('S');
+      console.log(j);
+
+      let usernameone = "Ajas";
+      let u = usernameone.concat(" ").concat("Shaikh");
+      console.log(usernameone);
+      console.log(u); 
+     
+      let us = u.replace("as","@$");
+      console.log(us)
+
+      let us1 = u.replaceAll("a","@");
+      console.log(us1);
+
+      let us3 = u.concat(" ").repeat(4);
+      console.log(us3);
+
+      let count = 0;
+      for(var i=0 ;i<username.length;i++){
+        console.log("Check");
+         if("Ajas" === username[i]){
+            count++;
+         }
+      }
+      console.log("a Count : " + count);
+</script>
+   
+</body>
+</html>

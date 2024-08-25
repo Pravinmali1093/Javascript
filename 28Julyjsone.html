@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var name = "Hello";
+       console.log(" First Assigned name : " + name);
+       document.write(name);
+       name = "Now I am New Hello";
+       console.log(" Second Assigned name : " + name);
+       document.write("<br/>"+name+"<h1>This Is Heading</h1>");
+
+        var x= 10;
+        y = x+10;
+        var str = "Hi"
+        document.write(y);
+       
+        document.write("<br/>")
+        var a = y+str;
+        document.write(a);
+       //window.print();
+
+
+function changeP(){
+    console.log("Function Calling .")
+    document.getElementById("a").innerHTML = "Paragraph Changed."
+}
+
+    </script>
+    <p id="a">The script above declares a variable</p>
+    <button onclick="changeP();">Change</button>
+</body>
+</html>

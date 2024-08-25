@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var name = "Hello";
+        console.log(" First Assigned name : " + name);
+        document.write(name);
+        name = "Now I am New Hello";
+        console.log(" Second Assigned name : " + name);
+        document.write("<br/>"+name+"<h1>This Is Heading</h1>");
+ 
+         var x= 10;
+         y = x+10;
+         x+=y;
+         var str = "Hi"
+         document.write(y);
+         document.write("<br/>")
+         document.write("x+=y"+x);
+         document.write("<br/>")
+         var a = y+str;
+         document.write(a);
+        //window.print();
+ 
+ 
+ function changeP(){
+     console.log("Function Calling .")
+     document.getElementById("a").innerHTML = "Paragraph Changed."
+ }
+
+function fun(){
+    let inp = document.getElementsByName("name");
+     console.log("Check Log : " + inp);
+     for (let i = 0; i < inp.length; i++) {
+    console.log(inp[i]); // Log each element
+}
+     greeting = (inp === "Pres".toLowerCase()) ? "Dear President":"Dear";
+     document.getElementById("w").innerHTML = greeting;
+}
+
+ </script>
+</head>
+<body>
+    
+    </script>
+    <p id="a">The script above declares a variable</p>
+    <button onclick="changeP();">Change</button>
+    <br>
+
+    <input type="text" class="name" name="name" id="q">
+    <p id="w"></p>
+    <button onclick="fun()">Call</button>
+</body>
+</html>

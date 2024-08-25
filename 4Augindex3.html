@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>Java Script Methods.</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate, modi temporibus fugiat dignissimos recusandae fuga iure pariatur facere nulla debitis perferendis voluptatum, porro tempore fugit quia consequatur explicabo perspiciatis?</p>
+    <script>
+        let username = "Harry 2 Potter 1 Prizon of Askban.Harry Potter Prizon of Askban";
+        let end = username.endsWith("Askban",username.length);
+        console.log(end);
+ 
+        let includeData = username.includes('of',6);
+        console.log(includeData);
+      
+        let str = username.match(/[a-z,A-Z,0-9]/g);
+        console.log(str);
+
+        // let str1 = username.matchAll(/H[a-z]/g);
+        // console.log(str1[0]);
+
+        let name = "Hello World";
+        let str3 =  name.padEnd(20,".Hello World.");
+        console.log(str3);
+     
+        let str4 =  name.padStart(15,"Check ");
+        console.log(str4);
+        
+
+        let str5 = name.substring(2,7);
+        console.log(str5);
+
+        let str6 = name.search("or");
+        console.log(str6);
+         
+        console.log(name.toString());
+
+    </script>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const users = [];
+        var u;
+        console.log(users);
+        function prework() {
+            console.log(users);
+        }
+        function addinguser() {
+            const user = {
+                id: "", name: "", address: "", uname: "", pass: ""
+            };
+
+            var id = document.getElementById('id').value;
+            console.log("Check Id: " + id);
+            user.id=id;
+            var name = document.getElementById('name').value;
+            console.log("Check Id: " + name);
+            user.name=name;
+            var address = document.getElementById('address').value;
+            console.log("Check Id: " + address);
+            user.address=address;
+            var uname = document.getElementById('uname').value;
+            console.log("Check Id: " + uname);
+            user.uname=uname;
+            var pass = document.getElementById('pass').value;
+            console.log("Check Id: " + pass);
+            user.pass=pass;
+
+             users.push(user);
+             console.log(users);
+
+            //  for(var i = 0 ; i <users.length;i++){
+            //     console.log("Iteration : " +JSON.stringify(users[i]));
+            //  }
+            users.forEach((e)=>{
+                console.log(e);
+            })
+        }
+
+        function deleteUser(){
+            users.pop();
+            console.log(users);
+        }
+
+        function finduser(){
+            var i = document.getElementById('i').value;
+            if(users.length>i){
+            u = users.at(i);
+           console.log(u);
+        }else{
+          alert("Data Not Presnt on this index : "+ i);
+        }
+        }
+
+        function Updateuser(){
+             console.log(u);
+             document.getElementById('id1').value=u.id;
+             document.getElementById('name1').value=u.name;
+             document.getElementById('address1').value=u.address;
+             document.getElementById('uname1').value=u.uname;
+             document.getElementById('pass1').value=u.pass;
+        }
+    </script>
+</head>
+
+<body onload="prework();">
+    <p>Test</p>
+    <!-- <form> -->
+    ID : <input type="text" id="id"><br><br>
+    NAME : <input type="text" id="name"><br><br>
+    ADDRESS : <input type="text" id="address"><br><br>
+    USERNAME : <input type="text" id="uname"><br><br>
+    PASSWORD : <input type="text" id="pass"><br><br>
+    <button onclick="addinguser();">Add User</button>
+
+    <button onclick="deleteUser();">Delete User</button>
+
+    Find Arrays data : <input type="text" id="i"> 
+    <button onclick="finduser();">Check Data</button>
+    <!-- </form> -->
+     <br><br>
+    ID : <input type="text" id="id1"><br><br>
+    NAME : <input type="text" id="name1"><br><br>
+    ADDRESS : <input type="text" id="address1"><br><br>
+    USERNAME : <input type="text" id="uname1"><br><br>
+    PASSWORD : <input type="text" id="pass1"><br><br>
+    <button onclick="Updateuser();">Udate User</button>
+</body>
+</body>
+
+</html>

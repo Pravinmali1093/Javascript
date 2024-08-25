@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function check() {
+            var flag = false; var flag1 = false;
+            var name = document.getElementsByName('name')[0].value;
+            console.log(name);
+            var pass = document.getElementsByName('pass')[0].value;
+            console.log(pass);
+            var fname = document.getElementsByClassName('a');
+            for (var i = 0; i < fname.length; i++) {
+                console.log("++++++++ : " + fname[i].value);
+            }
+            console.log(fname);
+             var fname1 = document.getElementById('f').value;
+             console.log("Chcek : " + fname1); 
+            if (fname1 === null || fname1 === "" || fname1 === "undefined") {
+                alert("Please Enter your fullname.");
+                document.getElementById("ferror").innerHTML = "Please provide your fullname.";
+                flag =false;
+            } else{
+                flag = true;
+                document.getElementById("ferror").innerHTML = "";
+            }
+            if (name === null || name === "" || name === "undefined") {
+                alert("Please Enter your Username.");
+                document.getElementById("nerror").innerHTML = "Please provide your fullname.";
+                flag1 =false;
+            } else{
+                flag1 = true;
+                document.getElementById("nerror").innerHTML = "";
+            }
+            if(flag && flag1) {
+                    //Data Submit .
+                    alert("Data addedd Successfully.");
+                    console.log("Data addedd Successfully.");
+             }
+
+        }
+    </script>
+    Fullname : <input type="text" class="a" name="fname" id="f"><span style="color: red;" id="ferror"></span>
+    Username : <input type="text" name="name" id="n"><span style="color: red;" id="nerror"></span>
+    Password : <input type="text" name="pass" id="p">
+    <button onclick="check()">Ok</button>
+</body>
+
+</html>

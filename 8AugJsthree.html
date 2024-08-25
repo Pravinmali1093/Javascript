@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var date = new Date();
+        console.log(date);
+        var day = date.getDay();
+        console.log(day);
+        var d = date.getDate();
+        console.log(d);
+        var m = date.getMonth();
+        console.log(m);
+        var t = date.getTime();
+        console.log(t);
+        date.setDate(14);
+        date.setHours(1);
+        date.setMinutes(10);
+        date.setSeconds(26);
+        console.log("Updated Date : " + date.toString());
+
+        function showDate() {
+            console.log("Click Date : " + date.toString());
+            document.getElementById('demo').innerHTML = date.toString();
+        }
+
+
+        function demodate() {
+            var d = document.getElementById('one').value;
+            var d1 = document.getElementById('two').value;
+            console.log("Click Check : " + d + " " + d1);
+            var dt = new Date(d1);
+            // dt.setDate(dt.getDate()+2);
+            // var dt1 = new Date(dt.getDate()+2);
+            console.log(new Date(dt.setDate(dt.getDate() + 2)));
+        }
+    </script>
+    <button onclick="showDate()">Check Date</button>
+    <marquee>
+        <p id="demo"></p>
+    </marquee>
+
+    Selected date : <input type="date" id="one" onchange="demodate()">
+    Selected New date : <input type="datetime-local" id="two" onchange="demodate()">
+</body>
+
+</html>
